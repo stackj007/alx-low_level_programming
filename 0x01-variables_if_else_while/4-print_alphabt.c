@@ -8,9 +8,9 @@
 */
 int main(void)
 {
-char letters;
+char letter;
 /* Print lowercase letters */
-for (letters = 'a'; letters <= 'z'; letters++)
+for (letter = 'a'; letter <= 'z'; letter++)
 {
 if (letter != 'q' && letter != 'e')
 putchar(letters);
