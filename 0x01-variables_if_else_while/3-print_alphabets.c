@@ -15,7 +15,7 @@ for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
 putchar(lowercase);
 /*print uppercase letters*/
 for (uppercase = 'A'; uppercase <= 'Z'; uppercase++)
-putchar(uppercase)
-putchar('\n')
+putchar(uppercase);
+putchar('\n');
 return (0);
 }
