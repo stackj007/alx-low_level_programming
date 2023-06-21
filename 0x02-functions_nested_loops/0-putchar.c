@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* print_alphabet - Prints the alphabet in lowercase.
+:* print_alphabet - Prints the alphabet in lowercase.
 */
-}
+
 int main (void)
 {
 char str[] = "_putchar";
