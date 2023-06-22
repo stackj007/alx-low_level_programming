@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 
 /**
  * print_most_numbers - 0 - 9 apart
