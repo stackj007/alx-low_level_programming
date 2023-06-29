@@ -1,26 +1,29 @@
 #include <main.h>
 
 /**
- * *_strcpy - See description
- * @dest: char type string
- * @src: char type string
- * Description: Copy the string pointed to by pointer `src` to
- * the buffer pointed to by `dest`
- * Return: Pointer to `dest`
- */
+* *_strcpy - See description
+* @dest: char type string
+* @src: char type string
+* Description: Copy the string pointed to by pointer `src` to
+* the buffer pointed to by `dest`
+* Return: Pointer to `dest`
+*/
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+int c, c2;
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
+c = 0;
+/* find the size of the array */
+while (dest[c])
+c++;
 
-	return (dest);
-}}
+/* iterate throw each src array value without without the null byte*/
+for (c2 = 0; src[c]; c2++)
+/* append src[c2] to dest[c] while overwriting the null byte in dest*/
+dest[c++] = src[c2];
+return (dest);
+}
 
 /**
 * main - Entry point of the program.
