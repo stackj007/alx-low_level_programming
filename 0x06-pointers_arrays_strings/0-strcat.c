@@ -1,34 +1,26 @@
 #include <stdio.h>
 
 /**
-* _strcat - Concatenates two strings.
-* @dest: The destination string.
-* @src: The source string to be appended.
-*
-* Return: A pointer to the resulting string dest.
-*/
-char *_strcat(char *dest, const char *src)
+ * *_strcpy - See description
+ * @dest: char type string
+ * @src: char type string
+ * Description: Copy the string pointed to by pointer `src` to
+ * the buffer pointed to by `dest`
+ * Return: Pointer to `dest`
+ */
+
+char *_strcpy(char *dest, char *src)
 {
-char *dest_start = dest; /* Store the starting address of dest */
+	int i;
 
-/* Move dest pointer to the end of the string */
-while (*dest != '\0')
-{
-dest++;
-}
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
 
-/* Append characters from src to dest */
-while (*src != '\0')
-{
-*dest = *src;
-dest++;
-src++;
-}
-
-*dest = '\0'; /* Add the terminating null byte */
-
-return (dest_start); /* Return the starting address of dest */
-}
+	return (dest);
+}}
 
 /**
 * main - Entry point of the program.
