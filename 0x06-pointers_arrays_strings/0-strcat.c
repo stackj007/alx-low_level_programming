@@ -24,23 +24,3 @@ for (c2 = 0; src[c]; c2++)
 dest[c++] = src[c2];
 return (dest);
 }
-
-/**
-* main - Entry point of the program.
-*
-* Return: Always 0.
-*/
-int main(void)
-{
-char dest[100] = "Hello, ";
-char src[] = "world!";
-
-printf("Before concatenation: %s\n", dest);
-
-/* Concatenate the strings */
-_strcat(dest, src);
-
-printf("After concatenation: %s\n", dest);
-
-return (0);
-}
