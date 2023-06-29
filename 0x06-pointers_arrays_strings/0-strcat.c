@@ -1,26 +1,29 @@
-#include <main.h>
-
 /**
-* *_strcpy - See description
-* @dest: char type string
-* @src: char type string
-* Description: Copy the string pointed to by pointer `src` to
-* the buffer pointed to by `dest`
-* Return: Pointer to `dest`
+* _strcat - Concatenates two strings.
+* @dest: The destination string.
+* @src: The source string to be appended.
+*
+* Return: A pointer to the resulting string dest.
 */
-
 char *_strcat(char *dest, char *src)
 {
-int c, c2;
+int dest_len = 0;
+int src_len = 0;
 
-c = 0;
-/* find the size of the array */
-while (dest[c])
-c++;
+/* Find the length of dest */
+while (dest[dest_len] != '\0')
+dest_len++;
 
-/* iterate throw each src array value without without the null byte*/
-for (c2 = 0; src[c]; c2++)
-/* append src[c2] to dest[c] while overwriting the null byte in dest*/
-dest[c++] = src[c2];
+/* Find the length of src */
+while (src[src_len] != '\0')
+src_len++;
+
+/* Append characters from src to dest */
+for (int i = 0; i < src_len; i++)
+dest[dest_len++] = src[i];
+
+/* Add the terminating null byte */
+dest[dest_len] = '\0';
+
 return (dest);
 }
