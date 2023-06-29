@@ -1,14 +1,19 @@
-#include <stdio.h>
 #include "main.h"
 
-int main(void)
+/**
+* print_number - Prints an integer.
+* @n: The integer to be printed.
+*/
+void print_number(int n)
 {
-    char str[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.";
-
-    printf("Before ROT13: %s\n", str);
-    rot13(str);
-    printf("After ROT13: %s\n", str);
-
-    return (0);
+if (n < 0)
+{
+_putchar('-');
+n = -n;
 }
 
+if (n / 10)
+print_number(n / 10);
+
+_putchar((n % 10) + '0');
+}
