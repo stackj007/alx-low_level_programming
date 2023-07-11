@@ -7,7 +7,7 @@
 *Return: 0
 */
 
-int mian(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
 	(void)argc;
 	print("%s\n", argv[0]);
