@@ -1,4 +1,4 @@
-#include "stdio.h>"
+#include "stdio.h"
 
 /**
 * main - print program name followed by a new line
@@ -10,6 +10,6 @@
 int main(int argc, char const *argv[])
 {
 	(void)argc;
-	print("%s\n", argv[0]);
+	printf("%s\n", argv[0]);
 	return (0);
 }
